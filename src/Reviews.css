@@ -1,0 +1,197 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #f3f5fa;
+}
+
+.reviews {
+    width: 95%;
+    margin: 30px auto;
+}
+
+.reviews-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.reviews-header h2 {
+    font-size: 34px;
+    color: #222;
+}
+
+.reviews-header input {
+    width: 260px;
+    height: 45px;
+    border: 1px solid #d8d8d8;
+    border-radius: 10px;
+    padding: 0 15px;
+    outline: none;
+    font-size: 16px;
+}
+
+.review-card {
+    background: white;
+    border-radius: 18px;
+    padding: 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 8px 18px rgba(0,0,0,.08);
+}
+
+.review-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.reviews {
+    width: 95%;
+    margin: 40px auto;
+}
+
+.reviewsHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px;
+}
+
+.reviewsHeader h1 {
+    font-size: 40px;
+    color: #1d2939;
+}
+
+.searchBox {
+    width: 320px;
+    height: 50px;
+    background: white;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    padding: 0 18px;
+    box-shadow: 0 10px 25px rgba(0,0,0,.08);
+}
+
+.searchBox input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+
+.searchBox img {
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+}
+
+.reviewsList {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.reviewCard {
+    background: white;
+    border-radius: 22px;
+    padding: 25px;
+    box-shadow: 0 15px 30px rgba(0,0,0,.08);
+    transition: .3s;
+}
+
+.reviewCard:hover {
+    transform: translateY(-6px);
+}
+
+.reviewTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.teacherInfo {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.teacherInfo h3 {
+    color: #1d2939;
+}
+
+.teacherInfo span {
+    color: #31a8ff;
+    font-weight: 600;
+}
+
+.reviewTop p {
+    color: gray;
+}
+
+.blueLine {
+    width: 100%;
+    height: 3px;
+    background: #31a8ff;
+    border-radius: 20px;
+    margin: 18px 0;
+}
+
+.reviewText {
+    line-height: 1.8;
+    color: #555;
+    font-size: 16px;
+}
+
+@media(max-width:768px){
+
+    .reviewsHeader{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    .searchBox{
+        width:100%;
+    }
+
+    .teacherInfo{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:5px;
+    }
+
+    .reviewTop{
+        align-items:flex-start;
+    }
+}
+.review-top div {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.review-top span:first-child {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.course {
+    color: #35a7ff;
+}
+
+.line {
+    width: 100%;
+    height: 2px;
+    background: #35a7ff;
+    margin: 15px 0;
+}
+
+.review-card p {
+    color: #6d6d6d;
+    line-height: 1.7;
+    font-size: 16px;
+}
