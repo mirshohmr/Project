@@ -1,11 +1,15 @@
-import { useState } from 'react'
-import './App.css'
+import React from 'react'
+import Dashboard from './Dashboard' 
+import Raiting from './Raiting'
 
-export default function App() {
 
+const App = () => {
   return (
-    <>
-      
-    </>
+    <div>
+      <Dashboard/>
+      <Raiting/>
+    </div>
   )
 }
+
+export default App
