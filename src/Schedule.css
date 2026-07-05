@@ -1,0 +1,127 @@
+.schedule {
+    width: 95%;
+    margin: 40px auto;
+}
+
+.scheduleHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px;
+}
+
+.scheduleHeader h1 {
+    font-size: 40px;
+    color: #1d2939;
+}
+
+.scheduleHeader select {
+    width: 210px;
+    height: 48px;
+    border: none;
+    outline: none;
+    border-radius: 14px;
+    background: #31a8ff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 0 15px;
+}
+
+.scheduleGrid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 25px;
+}
+
+.lessonCard {
+    background: white;
+    border-radius: 22px;
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 15px 30px rgba(0,0,0,.08);
+    transition: .3s;
+}
+
+.lessonCard:hover {
+    transform: translateY(-8px);
+}
+
+.lessonInfo h2 {
+    margin-bottom: 18px;
+    color: #1d2939;
+}
+
+.lessonInfo p {
+    margin-top: 8px;
+    color: #555;
+}
+
+.lessonCard img {
+    width: 75px;
+}
+
+.empty {
+    color: #999;
+}
+
+@media(max-width:1000px){
+
+    .scheduleGrid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:700px){
+
+    .scheduleGrid{
+        grid-template-columns:1fr;
+    }
+
+    .scheduleHeader{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    .scheduleHeader select{
+        width:100%;
+    }
+
+}
+.weekSelect {
+    width: 240px;
+    height: 52px;
+    padding: 0 18px;
+    border: 2px solid #dce8ff;
+    border-radius: 14px;
+    background: white;
+    color: #1d2939;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0 8px 20px rgba(0,0,0,.08);
+    transition: .3s;
+}
+
+.weekSelect:hover {
+    border-color: #3b82f6;
+    box-shadow: 0 12px 28px rgba(59,130,246,.2);
+}
+
+.weekSelect:focus {
+    border-color: #2563eb;
+}
+.status {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 14px;
+    background: #eaf5ff;
+    color: #2563eb;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+}

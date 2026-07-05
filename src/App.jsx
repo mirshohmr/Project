@@ -1,15 +1,18 @@
-import React from 'react'
-import Dashboard from './Dashboard' 
+import './App.css'
+import Dashboard from './Dashboard'
 import Raiting from './Raiting'
+import Reviews from './Reviews'
+import Schedule from './Schedule'
+import Hero from './Hero.jsx'
 
-
-const App = () => {
+export default function App() {
   return (
-    <div>
-      <Dashboard/>
-      <Raiting/>
-    </div>
+    <>
+      <Hero />
+      <Dashboard />
+      <Raiting />
+      <Reviews />
+      <Schedule />
+    </>
   )
 }
-
-export default App
