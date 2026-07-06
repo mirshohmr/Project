@@ -1,7 +1,7 @@
 .container {
     width: 100%;
-    height: 100vh;
-    background: #F1F2F7;
+    min-height: 100vh;
+    background: #eef2f5;
 }
 
 .navbar {
@@ -9,59 +9,296 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 55px;
-    background: #FFFFFF;
-    box-shadow: 0 2px 8px 0 #00000040;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 18px;
+    background: #ffffff;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
     z-index: 2;
 }
 
 .navbar img {
-    margin: 7px 10px;
+    margin: 0 6px;
+    width: 42px;
+    height: 42px;
+    object-fit: cover;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.options-btn,
+.logo-btn,
+.translate-btn,
+.leave-btn {
+    width: 44px;
+    height: 44px;
+    object-fit: cover;
+}
+
+.options-btn {
+    margin-right: 6px;
+}
+
+.translate-button {
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    border-radius: 999px;
+    transition: background 0.2s ease;
+}
+
+.translate-button:hover {
+    background: rgba(37, 99, 235, 0.08);
 }
 
 .navbar-right {
-    position: absolute;
-    top: 0;
-    right: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .sidebar {
     position: fixed;
-    top: 55px;
+    top: 64px;
     left: 0;
-    width: 65px;
-    height: calc(100vh - 60px);
-    background: #FFFFFF;
-    box-shadow: 0 2px 8px 0 #00000040;
+    width: 94px;
+    height: calc(100vh - 64px);
+    background: #ffffff;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
     z-index: 1;
 }
 
-.sidebar img {
-    width: 45px;
-    height: 400px;
-    margin: 15px 10px;
-}
-
-.options-btn {
-    width: 45px;
-    height: 45px;
+.sidebar img,
+.sidebar .sidebar-btn {
+    width: 46px;
+    height: 46px;
+    margin: 16px auto;
+    display: block;
     object-fit: cover;
 }
 
-.logo-btn {
-    width: 45px;
-    height: 45px;
-    object-fit: cover;
+.page-content {
+    margin-top: 64px;
+    margin-left: 94px;
+    padding: 32px;
+    min-height: calc(100vh - 64px);
+    background: #eef2f5;
+    max-width: calc(100% - 94px);
 }
 
-.translate-btn {
-    width: 45px;
-    height: 45px;
-    object-fit: cover;
+.registration-page,
+.profile-card + .profile-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 64px);
 }
 
-.leave-btn {
-    width: 45px;
-    height: 45px;
-    object-fit: cover;
+.registration-card {
+    width: 100%;
+    max-width: 460px;
+    padding: 34px;
+    border-radius: 28px;
+    background: #ffffff;
+    box-shadow: 0 24px 70px rgba(15, 23, 42, 0.12);
+    border: 1px solid rgba(148, 163, 184, 0.16);
+}
+
+.registration-card h1 {
+    margin-bottom: 26px;
+    font-size: 30px;
+    color: #0f172a;
+}
+
+.registration-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.registration-card input {
+    width: 100%;
+    padding: 16px 18px;
+    font-size: 15px;
+    border: 1px solid #d1d5db;
+    border-radius: 16px;
+    outline: none;
+    background: #f8fafc;
+}
+
+.registration-card button {
+    width: 100%;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 16px;
+    background: #2563eb;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.registration-card button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 14px 30px rgba(37, 99, 235, 0.18);
+}
+
+.registration-card p {
+    margin-top: 16px;
+    color: #64748b;
+    font-size: 14px;
+}
+
+.profile-card {
+    width: min(560px, 100%);
+    margin: 48px auto;
+    padding: 36px;
+    border-radius: 30px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.98) 0%, rgba(244,247,251,0.98) 100%);
+    box-shadow: 0 30px 90px rgba(15, 23, 42, 0.14);
+    border: 1px solid rgba(148, 163, 184, 0.18);
+}
+
+.profile-card h2 {
+    margin-bottom: 24px;
+    font-size: 32px;
+    color: #0f172a;
+}
+
+.profile-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding: 20px 22px;
+    margin-bottom: 18px;
+    border-radius: 22px;
+    background: #f8fafc;
+    border: 1px solid rgba(148, 163, 184, 0.14);
+}
+
+.profile-row span {
+    color: #475569;
+    font-size: 15px;
+}
+
+.profile-row strong {
+    color: #0f172a;
+    font-size: 16px;
+}
+
+.profile-card p {
+    margin-top: 26px;
+    color: #64748b;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+@media (max-width: 1100px) {
+    .page-content {
+        margin-left: 72px;
+        padding: 24px;
+        max-width: calc(100% - 72px);
+    }
+}
+
+@media (max-width: 900px) {
+    .navbar {
+        height: 58px;
+        padding: 0 14px;
+    }
+
+    .sidebar {
+        width: 72px;
+        top: 58px;
+        height: calc(100vh - 58px);
+    }
+
+    .sidebar img,
+    .sidebar .sidebar-btn {
+        width: 40px;
+        height: 40px;
+        margin: 12px auto;
+    }
+
+    .page-content {
+        margin-left: 72px;
+        padding: 24px;
+    }
+}
+
+@media (max-width: 720px) {
+    .navbar {
+        height: 56px;
+        padding: 0 12px;
+    }
+
+    .sidebar {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: auto;
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        padding: 10px 0;
+        background: #ffffff;
+        box-shadow: 0 -10px 24px rgba(15, 23, 42, 0.12);
+        border-top: 1px solid rgba(148, 163, 184, 0.12);
+        z-index: 2;
+    }
+
+    .sidebar img,
+    .sidebar .sidebar-btn {
+        width: 42px;
+        height: 42px;
+        margin: 0;
+    }
+
+    .page-content {
+        margin-top: 56px;
+        margin-left: 0;
+        padding: 18px 16px 90px;
+        min-height: calc(100vh - 56px - 86px);
+        max-width: 100%;
+    }
+
+    .navbar-right {
+        gap: 8px;
+    }
+
+    .navbar-left {
+        gap: 8px;
+    }
+}
+
+@media (max-width: 520px) {
+    .navbar img,
+    .options-btn,
+    .logo-btn,
+    .translate-btn,
+    .leave-btn {
+        width: 36px;
+        height: 36px;
+    }
+
+    .sidebar img,
+    .sidebar .sidebar-btn {
+        width: 36px;
+        height: 36px;
+    }
+
+    .page-content {
+        padding: 14px 12px 90px;
+    }
 }
